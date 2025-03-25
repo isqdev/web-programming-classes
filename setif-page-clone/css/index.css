@@ -1,0 +1,87 @@
+@import url('variable.css');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color-body);
+    color: #ffffff;
+    text-align: center;
+}
+
+header {
+    margin-top: 0px;
+    background-color: #1e90ff;
+    padding: 10px;
+    font-size: 1em;
+    align-text: top;
+}
+
+main {
+    max-width: 990px;
+    background-color: var(--bg-color-container);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #222;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 20px;
+    background-color:rgb(234, 3, 11);
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color:rgb(254, 0, 8);
+    color: #ffffff;
+}
+
+.middle-content {
+    color: var(--txt-color);
+    line-height: 2;
+}
+
+.cards {
+    display: flex;
+    flex-direction: columns;
+    margin-left: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 20px;
+    background-color:rgb(53, 53, 53);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #222;
+    margin: 20px auto;
+    width: 250px;
+    gap: 100px
+}
+
+.card-title {
+    line-height: 2;
+    font-weight: bold;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card-content {
+    width: 100px;
+}
+
+@media (max-width: 600px) {
+    .card{
+        width: 95%;
+    }
+}
