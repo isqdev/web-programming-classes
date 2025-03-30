@@ -14,18 +14,53 @@
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 20px;
+    /* padding: 20px; */
     height: 200px;
+    width: 100%;
    
     background-image: url("https://media.licdn.com/dms/image/v2/D4D16AQEdaOrFJTdpIg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1733684188659?e=1747872000&v=beta&t=ViA2Ja-VJ-hNam1r3kpXyXMFAVjC75UuGuSwiZ_xYhM");
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat; 
   }
+
+  nav {
+    background-color:rgb(90, 205, 167); 
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  nav a {
+    color:rgb(74, 146, 120);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+  
+  nav a:hover {
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 10px auto;
+  }
+  
+  section {
+    background-color: #fff;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 4px;
+    height: fit-content;
+  }
   
   .profile-photo {
     width: 220px;
-    height: 288px;
+    height: 248px;
     border-radius: 5%;
     background-color: #ccc;
     margin-right: 20px;
@@ -74,41 +109,18 @@
   }
 
   .icons-container  {
-    margin-top: 20px;
+    margin-top: 0px;
   }
-  
-  nav {
-    background-color:rgb(90, 205, 167); 
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-  }
-  
-  nav a {
-    color:rgb(74, 146, 120);
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+
+  .contact-icon {
+    width: 2rem;
+
     transition: 0.2s;
   }
-  
-  nav a:hover {
-    color: #fff;
+
+  .contact-icon:hover{
     transform: scale(1.1);
-  }
-  
-  main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  section {
-    background-color: #fff;
-    margin-bottom: 40px;
-    padding: 20px;
-    border-radius: 4px;
-    height: fit-content;
+    cursor: pointer;
   }
 
   .container {
@@ -118,11 +130,14 @@
 
   .side-bar {
     width: 400px;
-    background-color: #fff;
-    margin-top: 100px;
     margin-right: 40px;
-    margin-left: 0px;
+  }
+
+  .about-and-contact {
+    background: #fff;
+    border-radius: 4px;
     padding: 20px;
+    margin-bottom: 40px;
   }
 
   .section-container {
@@ -131,19 +146,12 @@
   
   .info-section {
       display: flex;
-      margin-top: 20px;
       
   }
 
   .icon-container {
     justify-content: center;
-  }
-
-  .projects-section {
-
-  }
-
-  
+  } 
   .skills {
     margin-top: 100px;
     display: grid;
@@ -239,9 +247,9 @@
   
 @keyframes fluctuate{
   0%{
-    top: 80px;
+    top: 30px;
   }
   100%{
-    top: 90px;
+    top: 40px;
   }
 }
