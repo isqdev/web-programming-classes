@@ -1,255 +1,338 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    line-height: 1.4;
-  }
-  
-  header {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    /* padding: 20px; */
-    height: 200px;
-    width: 100%;
-   
-    background-image: url("https://media.licdn.com/dms/image/v2/D4D16AQEdaOrFJTdpIg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1733684188659?e=1747872000&v=beta&t=ViA2Ja-VJ-hNam1r3kpXyXMFAVjC75UuGuSwiZ_xYhM");
-    background-size: cover;       
-    background-position: center;  
-    background-repeat: no-repeat; 
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  nav {
-    background-color:rgb(90, 205, 167); 
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  line-height: 1.4;
+}
+
+header {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 12.5rem;
+  width: 100%;
+
+  background-image: url("https://media.licdn.com/dms/image/v2/D4D16AQEdaOrFJTdpIg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1733684188659?e=1747872000&v=beta&t=ViA2Ja-VJ-hNam1r3kpXyXMFAVjC75UuGuSwiZ_xYhM");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  background-color: rgb(90, 205, 167);
+  display: flex;
+  justify-content: center;
+  padding: 0.625rem 0;
+  width: 100%;
+}
+
+nav a {
+  color: rgb(74, 146, 120);
+  text-decoration: none;
+  margin: 0 0.9375rem;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+main {
+  padding: 1.25rem;
+  max-width: 85vw;
+  margin: 0.625rem auto;
+  display: flex;
+}
+
+section {
+  background-color: #fff;
+  margin-bottom: 2.5rem;
+  padding: 1.25rem;
+  border-radius: 4px;
+  height: fit-content;
+}
+
+.profile-photo {
+  width: 13.75rem;
+  height: 15.5rem;
+  border-radius: 5%;
+  background-color: #ccc;
+  margin-right: 1.25rem;
+  position: absolute;
+  object-fit: cover;
+
+  transition: 1s;
+}
+
+.profile-photo:hover {
+  scale: 1.05;
+}
+
+.banner-photo {
+  width: banner;
+  height: auto;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-info h1 {
+  font-size: 4.5rem;
+  text-shadow: 2px 2px 2px rgb(114, 114, 114);
+}
+
+.profile-info p {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  transition: 10s;
+}
+
+.technology-icon {
+  width: 3rem;
+  margin-right: 1.25rem;
+}
+
+.technology-icon:hover {
+  transform: scale(1.1);
+}
+
+.icons-container {
+  margin-top: 0px;
+}
+
+.contact-icon {
+  width: 2rem;
+
+  transition: 0.2s;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.side-bar {
+  width: 25rem;
+  margin-right: 2.5rem;
+}
+
+.about-and-contact {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.section-container {
+  width: 100%;
+}
+
+.info-section {
+  display: block;
+}
+
+.icon-container {
+  justify-content: center;
+}
+.skills {
+  margin-top: 6.25rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.25rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.project-card {
+  height: 12.5rem;
+  background: #fff;
+  box-shadow: 2px 2px 2px #e6e6e6;
+  border-radius: 0.625rem;
+  padding: 0.625rem;
+  justify-content: center;
+
+  transition: 0.5s;
+}
+
+.project-card .project-image {
+  width: 12.5rem;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.education {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.25rem;
+}
+
+.profile-photo {
+  position: relative;
+  animation: fluctuate 1s ease-in-out infinite alternate;
+  margin-left: 1.25rem;
+}
+
+.experience-card {
+  height: 6.25rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 2px #e6e6e6;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  transition: 0.2s;
+}
+
+.experience-card:hover {
+  transform: scale(1.005);
+}
+
+.company-logo {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  margin-right: 0.625rem;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.period {
+  background: rgb(231, 231, 231);
+  padding: 0px 1rem;
+  width: fit-content;
+  border-radius: 0.625rem;
+}
+
+.edu-card {
+  height: 6.25rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 2px #e6e6e6;
+  border-radius: 0.625rem;
+  margin-bottom: 0.625rem;
+
+  transition: 0.2s;
+} 
+
+.edu-card:hover {
+  transform: scale(1.005);
+}
+
+@keyframes fluctuate {
+  0% {
+    top: 1.875rem;
   }
-  
-  nav a {
-    color:rgb(74, 146, 120);
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: 0.2s;
+  100% {
+    top: 2.5rem;
   }
-  
-  nav a:hover {
-    color: #fff;
-    transform: scale(1.1);
-  }
-  
+}
+
+@media (max-width: 1000px) {
+
   main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 10px auto;
-  }
-  
-  section {
-    background-color: #fff;
-    margin-bottom: 40px;
-    padding: 20px;
-    border-radius: 4px;
-    height: fit-content;
-  }
-  
-  .profile-photo {
-    width: 220px;
-    height: 248px;
-    border-radius: 5%;
-    background-color: #ccc;
-    margin-right: 20px;
-    position: absolute;
-    object-fit: cover;
-
-    transition: 1s;
-  }
-
-  .profile-photo:hover {
-    scale: 1.05;
-  }
-
-  .banner-photo {
-    width: banner;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  .profile-info {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
-  
-  .profile-info h1 {
-    font-size: 72px;
-    text-shadow: 2px 2px 2px rgb(114, 114, 114);
-  }
-  
-  .profile-info p {
-    font-size: 24px;
-    font-weight: bold;
-
-    transition: 10.s;
-  }
-
-  .technology-icon {
-    width: 3rem;
-    margin-right: 20px;
-    
-  }
-
-  .technology-icon:hover{
-    transform: scale(1.1);
-  }
-
-  .icons-container  {
-    margin-top: 0px;
-  }
-
-  .contact-icon {
-    width: 2rem;
-
-    transition: 0.2s;
-  }
-
-  .contact-icon:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-
-  .container {
-    width: 1600px;
-    display: flex;  
   }
 
   .side-bar {
-    width: 400px;
-    margin-right: 40px;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 
-  .about-and-contact {
-    background: #fff;
-    border-radius: 4px;
-    padding: 20px;
-    margin-bottom: 40px;
+  nav {
+    display: flex;
+    justify-content: right;
+    padding: 0.625rem 6.5rem;
+    /* gap: 1rem; */
   }
+  
+  
 
+}
+
+@media (max-width: 768px) {
   .section-container {
-    width: 1600px;
-  }
-  
-  .info-section {
-      display: flex;
-      
+    width: 100%;
   }
 
-  .icon-container {
-    justify-content: center;
-  } 
-  .skills {
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-  }
- 
-  .project-card {
-    /* width: 200px; */
-    height: 200px;
-    background: #fff;
-    box-shadow: 2px 2px 2px #e6e6e6;
-    border-radius: 10px;
-    padding: 10px;
-    justify-content: center;
-
-    transition: 0.5s;
-  }
-
-  .project-card .project-image {
-    width: 200px;
-  }
-
-  .project-card:hover {
-    transform: scale(1.05);
-  }
-  
+  .info-section,
   .education {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .skills,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-info h1 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .profile-info p {
+    font-size: 1.2rem;
+    text-align: center;
   }
 
   .profile-photo {
+    width: 10rem;
+    height: 11rem;
+    margin: 0 auto 1rem auto;
     position: relative;
-    animation: fluctuate 1s ease-in-out infinite alternate;
+    display: block;
   }
 
-  .experience-card {
-    height: 100px;
-    display: flex;
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    height: auto;
+  }
+
+  nav {
+    flex-direction: column;
     align-items: center;
-    box-shadow: 2px 2px 2px #e6e6e6;
-    border-radius: 10px;
-    margin-bottom: 10px;
-
-    transition: 0.2s;
   }
 
-  .experience-card:hover {
-    transform: scale(1.005);
+  nav a {
+    margin: 0.5rem 0;
   }
+}
 
-  .company-logo {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin-right: 10px;
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px;
   }
+}
 
-  .job-title {
-    font-weight: bold;
+@media (min-width: 1440px) {
+  html {
     font-size: 20px;
-  }
-
-  .period {
-    background: rgb(231, 231, 231);
-    padding: 0px 16px;
-    width: fit-content;
-    border-radius: 10px;
-  }
-
-  .edu-card {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    box-shadow: 2px 2px 2px #e6e6e6;
-    border-radius: 10px;
-    margin-bottom: 10px;
-
-    transition: 0.2s;
-  }
-
-  .edu-card:hover {
-    transform: scale(1.005);
-  }
-  
-@keyframes fluctuate{
-  0%{
-    top: 30px;
-  }
-  100%{
-    top: 40px;
   }
 }
