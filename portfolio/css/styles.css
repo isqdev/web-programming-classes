@@ -10,6 +10,32 @@ body {
   line-height: 1.4;
 }
 
+#repos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.repo-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px #ccc;
+  transition: 0.2s;
+}
+
+.repo-card:hover {
+  transform: scale(1.02);
+}
+
+.repo-card a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
+}
+
+
 header {
   color: #fff;
   display: flex;
@@ -264,11 +290,7 @@ section {
     display: flex;
     justify-content: right;
     padding: 0.625rem 6.5rem;
-    /* gap: 1rem; */
   }
-  
-  
-
 }
 
 @media (max-width: 768px) {
@@ -323,7 +345,6 @@ section {
     margin: 0.5rem 0;
   }
 }
-
 
 @media (max-width: 1200px) {
   html {
