@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -83,6 +88,8 @@ section {
   padding: 1.25rem;
   border-radius: 4px;
   height: fit-content;
+
+  scroll-margin-top: 5rem;
 }
 
 .profile-photo {
@@ -135,7 +142,7 @@ section {
 }
 
 .icons-container {
-  margin-top: 0px;
+  margin-top: 1rem;
 }
 
 .contact-icon {
