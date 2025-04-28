@@ -13,30 +13,40 @@ function changeTheme() {
     btAlterarTema.textContent = btAlterarTema.textContent == "Light" ? 'Dark' : 'Light';
 }
 
-const openMenu = document.getElementById('open-menu');
-const closeMenu = document.getElementById('close-menu');
-const sideMenu = document.getElementById('side-menu');
-const overlay = document.getElementById('overlay');
-const menuLinks = sideMenu.querySelectorAll('a');
+let idiomaAtual = "pt";
 
-// Função para abrir o menu
-function openSideMenu() {
-  sideMenu.style.width = '250px';
-  overlay.style.display = 'block';
+function changeLanguage() {
+    idiomaAtual = idiomaAtual == "pt" ? "en" : "pt";
+    loadLanguage(idiomaAtual)
 }
 
-// Função para fechar o menu
-function closeSideMenu() {
-  sideMenu.style.width = '0';
-  overlay.style.display = 'none';
+function loadLanguage(idioma) {
+    fetch(`assets/${idioma}.json`)
+        .then(data => data.json())
+        .then(data => {
+            translate(data);
+        })
 }
 
-// Eventos
-openMenu.addEventListener('click', openSideMenu);
-closeMenu.addEventListener('click', closeSideMenu);
-overlay.addEventListener('click', closeSideMenu);
+function translate(linguagem) {
+    document.querySelectorAll("[data-i18n]").forEach(elemento=>{
+        const chave = elemento.getAttribute("data-i18n");
+        console.log(chave);
+        if (linguagem[chave]) {
+            elemento.textContent = linguagem[chave];
+        }
+    });
 
-// Fechar o menu quando clicar em qualquer link
-menuLinks.forEach(link => {
-  link.addEventListener('click', closeSideMenu);
-});
+    const btnLanguage = document.getElementById("lang");
+    btnLanguage.textContent = btnLanguage.textContent == "pt" ? "en" : "pt";
+
+    document.querySelectorAll("[data-i18n-alt]").forEach(elemento=>{
+        const chave = elemento.getAttribute("data-i18n-alt");
+        console.log(chave);
+        if (linguagem[chave]) {
+            elemento.setAttribute("alt", linguagem[chave])
+        }
+    });
+
+    
+}

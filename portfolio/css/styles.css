@@ -171,6 +171,8 @@ section {
   border-radius: 10px;
   font-size: 16px;
   font-weight: bold;
+
+  padding: 0 5px;
 }
 
 .theme-btn:hover {
@@ -372,6 +374,7 @@ section {
 
   .nav-items {
     flex-direction: column;
+    gap: 10px;
     align-items: center;
   }
 
