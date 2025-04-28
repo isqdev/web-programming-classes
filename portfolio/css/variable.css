@@ -1,0 +1,26 @@
+:root {
+    /* background */
+    --bg-color: #f0f0f0;
+    --sec-color:#fff;
+    --txt-color: black;
+    --repo-card-color: #fff;
+    --container-color: #fff;
+    --teal: rgb(90, 205, 167);
+    --teal-800: rgb(74, 146, 120);
+    --blue-linkedin: #0077B5;
+}
+
+[data-theme="light"]{
+    /* background */
+    --bg-color:rgb(54, 54, 54);
+    --sec-color:rgb(68, 68, 68);
+    --txt-color: #fff;
+    --repo-card-color:rgb(41, 41, 41);
+
+    /* text-color */
+    --container-color: #fff;
+
+    .repo-card {
+        box-shadow: none;
+      }
+}
